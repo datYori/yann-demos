@@ -1,0 +1,7 @@
+read_lines("file:/etc/os-release")
+parse as r"""(.*)=(.*)"""
+skip on fail
+into(
+name: _1,
+value:_2
+)

@@ -1,0 +1,13 @@
+raw: 1.0
+endpoint: GET
+metadata:
+  title: Get RAW Labs engine underlying OS
+  description: Retrieves OS infos querying local filesystem.
+  tags:
+    - os
+code: rql
+codeFile: osrelease.rql
+format: json
+computeClass: normal
+public: true
+enabled: true

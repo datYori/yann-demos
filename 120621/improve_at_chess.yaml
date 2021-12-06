@@ -1,0 +1,15 @@
+raw: 1.0
+endpoint: GET
+metadata:
+  title: Improve your chess game
+  description: Retrieves lost games for a given position and return you analysis URL
+  tags:
+    - chess.com
+    - chess
+    - improve
+code: rql
+codeFile: improve_at_chess.rql
+format: json
+computeClass: normal
+public: true
+enabled: true

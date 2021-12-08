@@ -1,0 +1,9 @@
+//should be
+// read(https://yann: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@api.github.com/repos/raw-labs/demos.raw-labs.com/traffic/clones)
+//
+clone_traffic := read("s3://rawlabs-public-test-data/github-traffic-clones-demos-raw-labs-com.json")
+
+select
+    ct.timestamp, ct.count
+from
+    clone_traffic.clones as ct

@@ -1,0 +1,14 @@
+raw: 0.9
+endpoint: GET
+metadata:
+  title: Repose Sync Activity
+  description: Retrieves the number of git clone happening on a github repo. Targeting an MVP used repo can helps measure the sync activity
+    - repose
+    - sync
+    - activity
+code: rql
+codeFile: repose_sync_activity.rql
+format: json
+computeClass: normal
+public: true
+enabled: true

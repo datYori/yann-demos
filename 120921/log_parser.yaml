@@ -1,0 +1,13 @@
+raw: 0.9
+endpoint: GET
+metadata:
+  title: Yet another log parser
+  description: Output exported Cloudwatch logs into table
+    - logs
+    - parse
+code: rql
+codeFile: log_parser.rql
+format: json
+computeClass: normal
+public: true
+enabled: true

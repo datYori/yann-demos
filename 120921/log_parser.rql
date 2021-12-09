@@ -1,0 +1,16 @@
+log_lines :=
+    read_lines("s3://just-ask-cloudwatch-logs/1625056793executor.log")
+    parse as r"""^(\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z).*\[([^\]]+)\]\s+(\w+)\s+([-\w.$#]+)\s*-?\s*(.*)"""
+    skip on fail
+    into
+        ( time: _1, thread: _2, level: _3, class: _4, message: _5)
+
+infos :=
+    select
+        *
+    from
+        log_lines
+    where
+        level = "INFO"
+
+infos

@@ -1,0 +1,16 @@
+raw: 0.9
+endpoint: GET
+metadata:
+  title: Yet another perf tests comparator
+  description: Compares perf tests results from raw-xml-test runs on compose and k8s
+    - compose
+    - k8s
+    - perfs
+    - compare
+    - raw-xml-test
+code: rql
+codeFile: compose_vs_k8s.rql
+format: json
+computeClass: normal
+public: true
+enabled: true

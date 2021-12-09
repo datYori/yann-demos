@@ -1,0 +1,10 @@
+compose_perfs:=read_csv("s3://justask8s-perf-tests/run1/user0/tpch1-csv-s3/csv-perf.csv")
+k8_perfs:=read_csv("s3://justask8s-perf-tests/run1/user1/tpch1-csv-s3/csv-perf.csv")
+select
+    t1.name as `query_name`,
+    t1.total_time/1000 as `compose_time(sec)`,
+    t2.total_time/1000 as `k8s_time(sec)`
+from
+    compose_perfs as t1,  k8_perfs as t2
+where
+    t1.name = t2.name
